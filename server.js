@@ -4,17 +4,8 @@ var PORT = 3002;
 // app.get('/', function (req, res){
 // 	res.send('hellow express!');
 // });
+var middleware = require('./middleware.js');
 
-var middleware = {
-	requireAuthentication:function(req, res, next){
-		console.log('private route hit');
-		next();
-	},
-	logger : function( req, res, next){
-		console.log('request:'+ new Date().toStringx() + ' ' + req.method +' '+ req.originalUrl);
-		next();
-	}
-};
 app.use(middleware.logger);
 //app.use(middleware.requireAuthentication);
 
