@@ -19,7 +19,7 @@ app.use(middleware.logger);
 //app.use(middleware.requireAuthentication);
 
 app.get('/about', middleware.requireAuthentication ,function (req, res){
-	res.send(' content of about!');
+	res.send(' content of about');
 });
 
 app.use(express.static(__dirname + '/public'));
