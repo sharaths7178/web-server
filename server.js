@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-var PORT = 3002;
+var PORT =  process.env.PORT ||3002;
 // app.get('/', function (req, res){
 // 	res.send('hellow express!');
 // });
